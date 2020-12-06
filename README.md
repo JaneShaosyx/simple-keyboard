@@ -1,6 +1,6 @@
 # simple-keyboard
 
-Simple-keyboard is a virtual keyboard controller which allows user to use mouse click, finger touch, and keyboard to play the notes. 
+[Simple-keyboard](https://janeshaosyx.github.io/simple-keyboard/) is a virtual keyboard controller which allows user to use mouse click, finger touch, and keyboard to play the notes. 
 
 Using Vue.js 2.x syntax.
 
