@@ -1,6 +1,13 @@
 <template>
   <div class="home">
-    <div class="container-home">
+    <div class="container-home" v-if="!isMobile()">
+      <recorder class="recorder"></recorder>
+      <control-sliders class="control-sliders"></control-sliders>
+      <control-buttons class="control-buttons"></control-buttons>
+      <octave-indicator class="octave-indicator"></octave-indicator
+      ><keyboard class="keyboard"></keyboard>
+    </div>
+    <div class="mobile" v-if="isMobile()">
       <recorder class="recorder"></recorder>
       <control-sliders class="control-sliders"></control-sliders>
       <control-buttons class="control-buttons"></control-buttons>
@@ -26,7 +33,19 @@ export default {
     ControlButtons,
     Recorder,
   },
-  methods: {},
+  methods: {
+    isMobile() {
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
 };
 </script>
 
@@ -71,5 +90,12 @@ export default {
   bottom: 38rem;
   margin-bottom: 4rem;
   right: 0;
+}
+.mobile {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left:50%;
+  transform: translateX(-50%+7rem) translateY(-50%+10rem) rotate(-90deg);
 }
 </style>

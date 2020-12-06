@@ -14,17 +14,30 @@ new Vue({
 }).$mount("#app");
 
 // change html font-size when resize the window
+const isMobile = () => {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
 const setHtmlFontSize = () => {
   const htmlDom = document.getElementsByTagName("html")[0];
   let htmlWidth =
     document.documentElement.clientWidth || document.body.clientWidth;
-  if (htmlWidth >= 1920) {
+  if (htmlWidth >= 1920 && !isMobile()) {
     htmlWidth = 1920;
+    htmlDom.style.fontSize = `${(htmlWidth / 1920) * 10}px`;
   }
-  if (htmlWidth <= 375) {
-    htmlWidth = 375;
+  if (isMobile()) {
+    let htmlHeight =
+      document.documentElement.clientHeight || document.body.clientHeight;
+    htmlDom.style.fontSize = `${(htmlHeight / 1920) * 13}px`;
   }
-  htmlDom.style.fontSize = `${(htmlWidth / 1920) * 10}px`;
 };
 window.onresize = setHtmlFontSize;
 setHtmlFontSize();

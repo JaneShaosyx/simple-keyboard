@@ -1,23 +1,47 @@
 <template>
-  <div class="container-keyboard">
-    <div class="scale" v-for="scale in curNoteList" :key="scale[0]">
-      <div
-        class="key-container"
-        v-for="note in scale"
-        :key="note"
-        @mousedown="noteOn(note)"
-        @mouseup="noteOff(note)"
-      >
+  <div class="wrapper">
+    <div class="container-keyboard" v-if="!isMobile()">
+      <div class="scale" v-for="scale in curNoteList" :key="scale[0]">
         <div
-          class="key-white"
-          :class="{ click: isClicked(note) }"
-          v-if="note.indexOf('#') == -1"
-        ></div>
+          class="key-container"
+          v-for="note in scale"
+          :key="note"
+          @mousedown="noteOn(note)"
+          @mouseup="noteOff(note)"
+        >
+          <div
+            class="key-white"
+            :class="{ click: isClicked(note) }"
+            v-if="note.indexOf('#') == -1"
+          ></div>
+          <div
+            class="key-black"
+            :class="{ blackClick: isClicked(note) }"
+            v-else
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-keyboard" v-else>
+      <div class="scale" v-for="scale in curNoteList" :key="scale[0]">
         <div
-          class="key-black"
-          :class="{ blackClick: isClicked(note) }"
-          v-else
-        ></div>
+          class="key-container"
+          v-for="note in scale"
+          :key="note"
+          @touchstart="noteOn(note)"
+          @touchend="noteOff(note)"
+        >
+          <div
+            class="key-white"
+            :class="{ click: isClicked(note) }"
+            v-if="note.indexOf('#') == -1"
+          ></div>
+          <div
+            class="key-black"
+            :class="{ blackClick: isClicked(note) }"
+            v-else
+          ></div>
+        </div>
       </div>
     </div>
   </div>
@@ -109,6 +133,17 @@ export default {
         this.player.start();
       } else {
         this.player = null;
+      }
+    },
+    isMobile() {
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+      ) {
+        return true;
+      } else {
+        return false;
       }
     },
   },
@@ -239,6 +274,17 @@ export default {
       if (Object.prototype.hasOwnProperty.call(qwertyToKeyMap, key)) {
         let note = qwertyToKeyMap[key] + this.curNoteList[0][0].split("")[1];
         this.noteOff(note);
+      }
+    },
+    isMobile() {
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+      ) {
+        return true;
+      } else {
+        return false;
       }
     },
   },

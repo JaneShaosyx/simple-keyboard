@@ -77,6 +77,7 @@ export default {
   height: 1.4rem;
   border-radius: 50%;
   background: #fff;
+  border: none;
   cursor: pointer;
 }
 
@@ -85,6 +86,7 @@ export default {
   height: 1.4rem;
   border-radius: 50%;
   background: #fff;
+  border: none;
   cursor: pointer;
 }
 </style>

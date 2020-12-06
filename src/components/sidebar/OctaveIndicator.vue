@@ -48,6 +48,7 @@ export default {
   background: #fff;
   cursor: pointer;
   border-radius: 1rem;
+  border: none;
 }
 
 .slider::-moz-range-thumb {
@@ -56,5 +57,6 @@ export default {
   background: #fff;
   cursor: pointer;
   border-radius: 1rem;
+  border: none;
 }
 </style>
