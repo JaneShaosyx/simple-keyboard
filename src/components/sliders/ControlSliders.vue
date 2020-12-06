@@ -59,6 +59,7 @@ export default {
 
 <style lang="less" scoped>
 .slider {
+  box-shadow: 0.3rem 0.3rem 1rem #666;
   -webkit-appearance: none;
   width: 39rem;
   height: 1.2rem;

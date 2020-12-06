@@ -1,8 +1,9 @@
 <template>
   <div class="home">
-    <control-sliders class="control-sliders"></control-sliders>
-    <control-buttons class="control-buttons"></control-buttons>
     <div class="container-home">
+      <recorder class="recorder"></recorder>
+      <control-sliders class="control-sliders"></control-sliders>
+      <control-buttons class="control-buttons"></control-buttons>
       <octave-indicator class="octave-indicator"></octave-indicator
       ><keyboard class="keyboard"></keyboard>
     </div>
@@ -10,11 +11,11 @@
 </template>
 
 <script>
-// import * as Tone from 'tone'
 import Keyboard from "../components/keyboard/Keyboard.vue";
 import OctaveIndicator from "../components/sidebar/OctaveIndicator.vue";
 import ControlSliders from "../components/sliders/ControlSliders.vue";
 import ControlButtons from "../components/buttons/ControlBottons.vue";
+import Recorder from "../components/recorder/Recorder.vue";
 
 export default {
   name: "Home",
@@ -23,6 +24,7 @@ export default {
     OctaveIndicator,
     ControlSliders,
     ControlButtons,
+    Recorder,
   },
   methods: {},
 };
@@ -54,14 +56,20 @@ export default {
 }
 .control-sliders {
   position: absolute;
-  bottom: 58rem;
+  bottom: 28rem;
   margin-bottom: 2.5rem;
-  left: 46rem;
+  left: 28rem;
 }
 .control-buttons {
   position: absolute;
-  bottom: 58rem;
+  bottom: 28rem;
   margin-bottom: 4rem;
-  right: 37rem;
+  right: 0;
+}
+.recorder {
+  position: absolute;
+  bottom: 38rem;
+  margin-bottom: 4rem;
+  right: 0;
 }
 </style>

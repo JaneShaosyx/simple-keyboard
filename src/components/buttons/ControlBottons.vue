@@ -60,6 +60,7 @@ export default {
   flex: 1;
 }
 .button {
+  box-shadow: 0.3rem 0.3rem 1rem #666;
   width: 8rem;
   height: 5.8rem;
   background-color: #bbb;
@@ -67,6 +68,6 @@ export default {
   margin-left: 1.6rem;
 }
 .clicked {
-  background-color: #333;
+  box-shadow: inset 0 0 1rem #555;
 }
 </style>

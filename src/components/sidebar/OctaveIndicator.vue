@@ -23,12 +23,12 @@ export default {
       this.bus.$emit("setOctave", this.curOctave);
     },
   },
-  methods: {},
 };
 </script>
 
 <style lang="less" scoped>
 .slider {
+  box-shadow: -0.3rem 0.3rem 1rem #666;
   margin: 0;
   -webkit-appearance: none;
   height: 4.8rem;
