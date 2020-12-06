@@ -35,7 +35,7 @@ You can use the below keys on your keyboard to play the corresponding notes. You
 
 ## Octave Control
 
-<img src="./simple-keyboard/src/assets/sidebar.png" alt="sidebar"  />
+<img src="./src/assets/sidebar.png" alt="sidebar"  />
 
 + This simple-keyboard supports from C1 to B7 notes.
 
