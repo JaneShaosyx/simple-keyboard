@@ -125,14 +125,13 @@ export default {
       } else if (!this.recording) {
         const content = await this.recorder.stop();
         this.recordContent = URL.createObjectURL(content);
+        this.bus.$emit("download", this.recordContent);
         this.player = new Tone.Player(this.recordContent).toDestination();
       }
     },
     play() {
       if (this.play) {
         this.player.start();
-      } else {
-        this.player = null;
       }
     },
     isMobile() {
