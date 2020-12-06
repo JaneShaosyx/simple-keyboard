@@ -63,7 +63,7 @@ You can use `deploy.sh` to deploy the project to your GitHub page.
 
 ## Usage
 
-See the [Instructions.md](https://github.com/JaneShaosyx/simple-keyboard/blob/master/Instruction.md) file for details
+See the [Instructions.md](https://github.com/JaneShaosyx/simple-keyboard/blob/master/Instructions.md) file for details
 
 ## Support Browsers
 
