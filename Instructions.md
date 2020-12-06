@@ -2,7 +2,7 @@
 
 ## Note Play
 
-### <img src="/Users/mac/Documents/U2-1/Mumt301-Music_and_the_Internet/FinalProject/simple-keyboard/src/assets/keyboard.png" alt="keyboard"  />
+### <img src="./src/assets/keyboard.png" alt="keyboard"  />
 
 ### Mouse Click
 
@@ -35,7 +35,7 @@ You can use the below keys on your keyboard to play the corresponding notes. You
 
 ## Octave Control
 
-<img src="/Users/mac/Documents/U2-1/Mumt301-Music_and_the_Internet/FinalProject/simple-keyboard/src/assets/sidebar.png" alt="sidebar"  />
+<img src="./simple-keyboard/src/assets/sidebar.png" alt="sidebar"  />
 
 + This simple-keyboard supports from C1 to B7 notes.
 
@@ -46,7 +46,7 @@ You can use the below keys on your keyboard to play the corresponding notes. You
 
 ## Volume, Release Time, Sustain Time control
 
-![slider](/Users/mac/Documents/U2-1/Mumt301-Music_and_the_Internet/FinalProject/simple-keyboard/src/assets/slider.png)
+![slider](./src/assets/slider.png)
 
 ### Volume Control
 
@@ -62,7 +62,7 @@ Use the top slider to control the sustain time of one note. The default sustain 
 
 ## Sustain Button, AutoWah Effect, Distortion Effect
 
-![button](/Users/mac/Documents/U2-1/Mumt301-Music_and_the_Internet/FinalProject/simple-keyboard/src/assets/button.png)
+![button](./src/assets/button.png)
 
 ### Sustain Button
 
@@ -80,7 +80,7 @@ When you click the right button, you turn on the distortion effect of the note.
 
 ## Record and Play
 
-![record](/Users/mac/Documents/U2-1/Mumt301-Music_and_the_Internet/FinalProject/simple-keyboard/src/assets/record.png)
+![record](./src/assets/record.png)
 
 ### Record
 

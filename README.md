@@ -58,7 +58,7 @@ You can use `deploy.sh` to deploy the project to your GitHub page.
 + vue: ^2.6.11
 + vue-router: ^3.2.0
 + vuex: ^3.4.0
-+ @vue/cli: ^ 4.5.8
++ @vue/cli: ^4.5.8
 
 
 ## Usage
