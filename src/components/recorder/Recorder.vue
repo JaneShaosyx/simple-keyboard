@@ -1,5 +1,11 @@
 <template>
   <div class="recorder-buttons">
+    <a
+      v-if="downloadUrl"
+      class="download-button"
+      :href="downloadUrl"
+      download="recording.webm"
+    ></a>
     <div
       class="recorder-button"
       :class="{ clicked: recording }"
@@ -16,9 +22,14 @@ export default {
     return {
       recording: false,
       play: false,
+      downloadUrl: "",
     };
   },
-  created() {},
+  created() {
+    this.bus.$on("download", (url) => {
+      this.downloadUrl = url;
+    });
+  },
   watch: {
     recording() {
       this.bus.$emit("onRecord", this.recording);
@@ -44,6 +55,14 @@ export default {
   flex: 1;
 }
 .recorder-button {
+  box-shadow: 0.3rem 0.3rem 1rem #666;
+  width: 8rem;
+  height: 5.8rem;
+  background-color: #bbb;
+  display: inline-block;
+  margin-left: 1.6rem;
+}
+.download-button {
   box-shadow: 0.3rem 0.3rem 1rem #666;
   width: 8rem;
   height: 5.8rem;
